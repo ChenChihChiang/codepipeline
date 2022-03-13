@@ -1,5 +1,9 @@
 version: 0.2
-phases: 
+phases:
+  install:
+    commands:
+      - sudo yum -y update
+      - sudo yum -y install docker
   build:
     commands:
       - docker build . -t chihchiang/day60
