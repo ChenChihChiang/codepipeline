@@ -6,7 +6,7 @@ phases:
   build:
     commands:
       - |
-        if [[ -z $FIX_HASH ]]
+        if [[ ! -z $FIX_HASH ]]
         then 
           echo $FIX_HASH
         else
