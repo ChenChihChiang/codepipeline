@@ -6,7 +6,7 @@ phases:
   build:
     commands:
       - |
-        if [ $ROLLBACK == "true" ]
+        if [ "$ROLLBACK" == "true" ]
         then 
           echo START ROLLBACK 
         else
