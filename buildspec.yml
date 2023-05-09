@@ -2,12 +2,11 @@ version: 0.2
 phases:
   install:
     commands:
-      - yum -y update
-      - yum -y install docker
+      - echo "YES"
   build:
     commands:
       - |
-        if [ $ROLLBACK = true ]
+        if [ $ROLLBACK == "true" ]
         then 
           echo START ROLLBACK 
         else
