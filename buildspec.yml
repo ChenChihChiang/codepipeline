@@ -6,4 +6,10 @@ phases:
       - yum -y install docker
   build:
     commands:
-      - docker build . -t chihchiang/day60
+      - |
+        if [ $ROLLBACK = true ]
+        then 
+          echo START ROLLBACK 
+        else
+          echo NO ROLLBACL
+      - echo $FIX_HASH
