@@ -11,4 +11,5 @@ phases:
           echo START ROLLBACK 
         else
           echo NO ROLLBACL
+        fi 
       - echo $FIX_HASH
