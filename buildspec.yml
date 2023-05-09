@@ -6,10 +6,9 @@ phases:
   build:
     commands:
       - |
-        if [[ "$ROLLBACK" == "true" ]]
+        if [[ -z $FIX_HASH ]]
         then 
-          echo START ROLLBACK 
+          echo $FIX_HASH
         else
           echo NO ROLLBACL
         fi 
-      - echo $FIX_HASH
